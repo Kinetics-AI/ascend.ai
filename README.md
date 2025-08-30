@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 网站技术方案 
+- React
+- Next.js
+- Typescript
+- Tailwind CSS / shadcn
 
-## Getting Started
 
-First, run the development server:
+# General
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Style
+- ```m-``` & ```p-``` use 6 / 12 /24
+- ```scroll-mt-32```
+- note in website ```text-xs```
+- ```rounded-sm```
+- breakpoint: ```md``` / ```xl``` / ```3xl```
+- black color: ```#0d0d0d```
+- max width: ```max-w-5xl``` / ```max-w-7xl```
+- ```Link```: ```target={xxx.startsWith('http') ? '_blank' : '_self'}```
+- text: ```leading-relaxed```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Note
+- use ```<Link>``` instead of ```<a>```
+- use ```<Image>``` instead of ```<img>```
+- use ```<div><Image></div>``` instead of ```<div className='background-image'></div>```
+- <FadeIn> for animation of all foreground elements, note that it could probabilistically change layout, check everytime when add this
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+# dev
 
-To learn more about Next.js, take a look at the following resources:
+### Setup
+- install ```npm```
+- ```npm install``` to install or update all dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Preview
+- ```npm run dev```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deploy
+- Simply push the code to the GitHub and it will be done automatically.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 图像要求
+- upload to corresponding folder in [https://github.com/MMLABassets/MMLABassets.github.io](https://github.com/MMLABassets/MMLABassets.github.io) / access via ```https://mmlabassets.github.io/*```
+- reduce image size -> use [https://www.photopea.com/](https://www.photopea.com/) to reduce image quality, normally 90%
+
+![image](https://github.com/user-attachments/assets/2d0062bf-65ea-44f5-9511-b4a3b649998a)
+
+### Member
+- full: 512 x 512 / JPG / [name]_[surname]_f.jpg, e.g. ping_luo_f.jpg
+- compressed: 384 x 384 / JPG / ~20kb / [name]_[surname]_c.jpg, e.g. ping_luo_c.jpg
+
+### Open Source
+- long side approx. 512 / JPG / 30kb
+- without margin / 紅框為圖像邊界
+  
+| ✅ | ✖️ |
+|---|---|
+| ![image](https://github.com/user-attachments/assets/96c2db29-e206-4850-b956-6f47a460c5a0) | ![image](https://github.com/user-attachments/assets/6a649dfe-3211-48ec-bcfa-d974db25c23d) |
