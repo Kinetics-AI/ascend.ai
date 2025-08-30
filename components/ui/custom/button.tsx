@@ -19,16 +19,16 @@ export function CustomButtonV1({
 }: AppButtonProps) {
     return (
         <Button
-        variant={variant}
-        size={size}
-        className={cn(
-            "bg-foreground/30 hover:bg-foreground/60",
-            "text-background",
-            "rounded-full",
-            "transition delay-100 duration-200",
-            className
-        )}
-        {...props}
+            variant={variant}
+            size={size}
+            className={cn(
+                "bg-foreground/30 hover:bg-foreground/60",
+                "text-background",
+                "rounded-full",
+                "transition delay-100 duration-200",
+                className
+            )}
+            {...props}
         />
     )
 }
