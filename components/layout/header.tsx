@@ -37,7 +37,7 @@ export function Header() {
                 <CustomButtonV1 className="ml-3">
                     <Link href="/" className="select-none">
                         <Image
-                            src="/resources/logo/OpenDriveLab/D.png"
+                            src="/favicon.ico"
                             alt="Ascend AI"
                             width={6}
                             height={6}
