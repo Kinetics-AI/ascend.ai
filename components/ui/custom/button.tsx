@@ -25,6 +25,7 @@ export function CustomButtonV1({
             "bg-foreground/30 hover:bg-foreground/60",
             "text-background",
             "rounded-full",
+            "transition delay-100 duration-200",
             className
         )}
         {...props}
