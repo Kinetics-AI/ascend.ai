@@ -1,19 +1,24 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import {useTranslations} from "next-intl";
 
 import { Input } from '@/components/ui/input'
 import { CustomButtonV1 } from "@/components/ui/custom/button";
+
 
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 
 
 export function EmailSubscribe() {
+
+    const t = useTranslations("Layout");
+
     const [email, setEmail] = useState('')
     const [valid, setValid] = useState(false)
     const [loading, setLoading] = useState(false)
-    const [placeholder, setPlaceholder] = useState('Email');
+    const [placeholder, setPlaceholder] = useState(t("email"));
     useEffect(() => {
         const isValid = emailRegex.test(email.trim())
         setValid(isValid && email.trim() !== '')
@@ -37,14 +42,14 @@ export function EmailSubscribe() {
         } catch (err) {
         } finally {
             setEmail('')
-            setPlaceholder('Subscribed');
+            setPlaceholder(t("subscribed"));
             setLoading(false)
         }
     }
 
     const handleFocus = () => {
-        if (placeholder === 'Subscribed') {
-            setPlaceholder('Email');
+        if (placeholder === t("subscribed")) {
+            setPlaceholder(t("email"));
         }
     };
 
@@ -59,7 +64,7 @@ export function EmailSubscribe() {
                 className='rounded-full text-xs md:text-xs h-5 max-w-xs focus-visible:ring-0'
             />
             <CustomButtonV1 onClick={handleSubmit} disabled={!valid || loading} className='text-xs h-5 p-2 font-light bg-foreground'>
-                {loading ? '...' : 'Subscribe'}
+                {loading ? '...' : t("subscribe")}
             </CustomButtonV1>
         </div>
     )

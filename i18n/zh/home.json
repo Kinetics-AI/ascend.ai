@@ -2,7 +2,10 @@
     "Layout": {
         "careers": "招贤纳士",
         "contact": "联系我们",
-        "about": "关于我们"
+        "about": "关于我们",
+        "email": "电子邮箱",
+        "subscribe": "订阅",
+        "subscribed": "已订阅"
     },
     "Home": {
         "title": "超维动力"

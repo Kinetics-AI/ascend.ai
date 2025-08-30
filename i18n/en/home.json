@@ -2,7 +2,10 @@
     "Layout": {
         "careers": "Careers",
         "contact": "Contact",
-        "about": "About"
+        "about": "About",
+        "email": "Email",
+        "subscribe": "Subscribe",
+        "subscribed": "Subscribed"
     },
     "Home": {
         "title": "Ascend AI"
