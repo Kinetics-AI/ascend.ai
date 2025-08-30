@@ -23,30 +23,30 @@ export function EmailSubscribe() {
         if (!valid) return
         setLoading(true)
 
-        const payload = {
-            email,
-            message: '',
-            organization: '',
-            first_name: '',
-            last_name: '',
-        }
+        const payload = new URLSearchParams();
+        payload.append('EMAIL', email);
 
         try {
-            const res = await fetch('https://drivelab.openxlab.org.cn/gw/drivelab-register-api-service/signup/', {
+            const res = await fetch('https://2cd7a836.sibforms.com/serve/MUIFACBQktRcIIsh1i0dh_98dd7nkVCYuwqU3rJd4OAmPmjQ-9n0v5B4K9LCGVI36zerYTCXiREy9OegmtHRIhqjqVJKUTIGIVj_YJp1YL7zSh8hcaYnYHZCEOydLoBOLI2Rj3Qpao_MZ93lFas_RCrXKtRkFeEf88iYzNUM5MFOV0uQgiAeH3iJ8m72pNK9bPS-sKRDInMUvJ9p', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: payload.toString(),
             })
-            if (res.ok) {
-                setEmail('')
-                setPlaceholder('Subscribed');
-            } else {
-            }
         } catch (err) {
         } finally {
+            setEmail('')
+            setPlaceholder('Subscribed');
             setLoading(false)
         }
     }
+
+    const handleFocus = () => {
+        if (placeholder === 'Subscribed') {
+            setPlaceholder('Email');
+        }
+    };
 
     return (
         <div className="w-full flex flex-row gap-3 items-center">
@@ -55,7 +55,8 @@ export function EmailSubscribe() {
                 placeholder={placeholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className='rounded-full text-xs md:text-xs h-5 max-w-xs'
+                onFocus={handleFocus}
+                className='rounded-full text-xs md:text-xs h-5 max-w-xs focus-visible:ring-0'
             />
             <CustomButtonV1 onClick={handleSubmit} disabled={!valid || loading} className='text-xs h-5 p-2 font-light bg-foreground'>
                 {loading ? '...' : 'Subscribe'}
