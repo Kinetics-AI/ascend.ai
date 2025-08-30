@@ -7,12 +7,10 @@ const media: {
     icon: React.ElementType;
     url: string;
 }[] = [
-    { icon: Mail, url: "mailto:contact@opendrivelab.com" },
-    { icon: Github, url: "https://github.com/OpenDriveLab" },
-    { icon: Twitter, url: "https://twitter.com/OpenDriveLab" },
-    { icon: Linkedin, url: "https://www.linkedin.com/company/opendrivelab/" },
-    { icon: Youtube, url: "https://www.youtube.com/@OpenDriveLab" },
-    { icon: DiscIcon, url: "https://discord.gg/vCw2PjR2B8" },
+    { icon: Github, url: "https://github.com/" },
+    { icon: Twitter, url: "https://twitter.com/" },
+    { icon: Linkedin, url: "https://www.linkedin.com/" },
+    { icon: Youtube, url: "https://www.youtube.com/" },
 ];
 
 import { Separator } from "@/components/ui/separator"
