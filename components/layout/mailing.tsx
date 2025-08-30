@@ -32,7 +32,7 @@ export function EmailSubscribe() {
         payload.append('EMAIL', email);
 
         try {
-            const res = await fetch('https://2cd7a836.sibforms.com/serve/MUIFACBQktRcIIsh1i0dh_98dd7nkVCYuwqU3rJd4OAmPmjQ-9n0v5B4K9LCGVI36zerYTCXiREy9OegmtHRIhqjqVJKUTIGIVj_YJp1YL7zSh8hcaYnYHZCEOydLoBOLI2Rj3Qpao_MZ93lFas_RCrXKtRkFeEf88iYzNUM5MFOV0uQgiAeH3iJ8m72pNK9bPS-sKRDInMUvJ9p', {
+            const res = await fetch('https://45ebcc24.sibforms.com/serve/MUIFAB69B0Bz3Ovq4GWdW_3DmgIUf2a8InjZB2D3gVyCVWK1J9f_z8XrobhgVhD7PLmh3CZ05WRGzUBUPZHmrzB9CVj7ENz1axKBuRTRJ4WKKvEJynaKePbv_pEbAK5xfyAiq3LBrquYm5cGluS1QaYYqwTPKwPyqkcTxGTYxr9yM52rNh-rdx9O8_yWF-gidk2lPi7WEVUmIdCj', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
