@@ -1,19 +1,18 @@
 import * as React from "react"
 import type { Metadata } from "next";
+import {notFound} from 'next/navigation';
 
-import "../globals.css";
+import {hasLocale, NextIntlClientProvider} from 'next-intl';
+import {setRequestLocale} from 'next-intl/server';
+import {routing} from '@/i18n/routing';
 
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({locale}));
+}
 
-import {notFound} from 'next/navigation';
-import {Locale, hasLocale, NextIntlClientProvider} from 'next-intl';
-import {getTranslations, setRequestLocale} from 'next-intl/server';
-import {clsx} from 'clsx';
-import {routing} from '@/i18n/routing';
-
-
-
+import "../globals.css";
 // font
 import { Inter } from "next/font/google";
 const inter = Inter({
@@ -21,10 +20,9 @@ const inter = Inter({
     display: "swap",
 });
 
-
-
 // Google Analystics
 import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 
 export const metadata: Metadata = {
@@ -46,11 +44,6 @@ export const metadata: Metadata = {
 
 
 
-
-export function generateStaticParams() {
-    return routing.locales.map((locale) => ({locale}));
-}
-
 export default async function RootLayout({
     children,
     params,
@@ -68,6 +61,7 @@ export default async function RootLayout({
 
     return (
         <html lang={locale} className={inter.className}>
+
             <body>       
                 <NextIntlClientProvider>
 
@@ -83,7 +77,9 @@ export default async function RootLayout({
                     
                 </NextIntlClientProvider>
             </body>
+
             <GoogleAnalytics gaId="G-PEGEFQHXRE" />
+
         </html>
     );
 }
