@@ -83,7 +83,7 @@ export default async function RootLayout({
                     
                 </NextIntlClientProvider>
             </body>
-            <GoogleAnalytics gaId="xx" />
+            <GoogleAnalytics gaId="G-PEGEFQHXRE" />
         </html>
     );
 }
