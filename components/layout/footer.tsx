@@ -73,7 +73,7 @@ export function Footer() {
 
 
             <div className="w-full max-w-7xl text-xs">
-                Ascend AI 超维动力 © 2021 - 2025
+                Ascend AI 超维动力 © 2025
             </div>
 
         </footer>
