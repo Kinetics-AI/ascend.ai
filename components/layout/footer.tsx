@@ -16,7 +16,7 @@ const media: {
 ];
 
 import { Separator } from "@/components/ui/separator"
-
+import { EmailSubscribe } from "@/components/layout/mailing"
 
 
 
@@ -58,16 +58,21 @@ export function Footer() {
 
 
 
-            <div className="w-full max-w-7xl flex gap-6 flex-wrap">
-                {media.map(({icon: Icon, url}, idx) => (
-                    <Link href={url} target="_blank" key={idx} className="group">
-                        <Icon className="size-4 text-foreground group-hover:text-foreground/60 duration-300"/>
-                    </Link>
-                ))}
+            <div className="w-full max-w-7xl gap-6 flex flex-row justify-between items-center">
+                <div className=" flex gap-6 flex-wrap">
+                    {media.map(({icon: Icon, url}, idx) => (
+                        <Link href={url} target="_blank" key={idx} className="group">
+                            <Icon className="size-4 text-foreground group-hover:text-foreground/60 duration-300"/>
+                        </Link>
+                    ))}
+                </div>
+                <div>
+                    <EmailSubscribe/>
+                </div>
             </div>
 
 
-            <div className="w-full max-w-7xl text-foreground text-xs">
+            <div className="w-full max-w-7xl text-xs">
                 Ascend AI 超维动力 © 2021 - 2025
             </div>
 
